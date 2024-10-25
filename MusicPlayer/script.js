@@ -22,13 +22,14 @@ function playPause() {
     }
 }
 
-if (audio.play()) { 
+audio.onplay = () => {
     controlIcon.classList.remove('fa-play');
     controlIcon.classList.add('fa-pause');
     setInterval(() => {
         progress.value = audio.currentTime;
     }, 1000);
-}
+};
+
 
 progress.onchange = function() { 
     audio.play();
