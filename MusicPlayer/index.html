@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/d2d7e6a632.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="musicCard">
+        <nav>
+          <div class="circle">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="circle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+        <img src="icon.png" alt="Taylor Swift" class="Image-icon" />
+        <h1>Love Story</h1>
+        <p>Taylor Swift</p>
+        <audio id="audio">
+          <source
+            src="Taylor Swift - Love Story (Lyrics).mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+        <input type="range" value="0" id="progress" />
+
+        <div class="controls">
+          <div class="circle">
+            <i class="fa-solid fa-step-backward"></i>
+          </div>
+          <div onclick="playPause()" class="circle play">
+            <i class="fa-solid fa-play" id="controlIcon"></i>
+          </div>
+          <div class="circle">
+            <i class="fa-solid fa-step-forward"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
